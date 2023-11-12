@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sidharth.chomu.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_writingFragment"
+            app:destination="@id/writingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_grammarFragment"
+            app:destination="@id/grammarFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_interviewFragment"
+            app:destination="@id/interviewFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_emailFragment"
+            app:destination="@id/emailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.sidharth.chomu.EmailFragment"
+        android:label="fragment_email"
+        tools:layout="@layout/fragment_email" >
+        <action
+            android:id="@+id/action_emailFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/grammarFragment"
+        android:name="com.sidharth.chomu.GrammarFragment"
+        android:label="fragment_grammar"
+        tools:layout="@layout/fragment_grammar" >
+        <action
+            android:id="@+id/action_grammarFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interviewFragment"
+        android:name="com.sidharth.chomu.InterviewFragment"
+        android:label="fragment_interview"
+        tools:layout="@layout/fragment_interview" >
+        <action
+            android:id="@+id/action_interviewFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.sidharth.chomu.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="prompt"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.sidharth.chomu.SummaryFragment"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/action_summaryFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/writingFragment"
+        android:name="com.sidharth.chomu.SocialFragment"
+        android:label="fragment_writing"
+        tools:layout="@layout/fragment_social" >
+        <action
+            android:id="@+id/action_writingFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.sidharth.chomu.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+</navigation>
