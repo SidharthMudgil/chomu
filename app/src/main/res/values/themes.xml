@@ -1,6 +1,9 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Chomu" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/blue700</item>
+        <item name="android:windowBackground">@color/blue700</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 
     <style name="Theme.Chomu" parent="Base.Theme.Chomu" />
