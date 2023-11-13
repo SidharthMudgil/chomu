@@ -1,4 +1,4 @@
-package com.sidharth.chomu
+package com.sidharth.chomu.presentation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

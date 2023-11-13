@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.sidharth.chomu.HomeFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/emailFragment"
-        android:name="com.sidharth.chomu.EmailFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.EmailFragment"
         android:label="fragment_email"
         tools:layout="@layout/fragment_email" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/grammarFragment"
-        android:name="com.sidharth.chomu.GrammarFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.GrammarFragment"
         android:label="fragment_grammar"
         tools:layout="@layout/fragment_grammar" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/interviewFragment"
-        android:name="com.sidharth.chomu.InterviewFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.InterviewFragment"
         android:label="fragment_interview"
         tools:layout="@layout/fragment_interview" >
         <action
@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.sidharth.chomu.ResultFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <argument
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
-        android:name="com.sidharth.chomu.SummaryFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.SummaryFragment"
         android:label="fragment_summary"
         tools:layout="@layout/fragment_summary" >
         <action
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/writingFragment"
-        android:name="com.sidharth.chomu.SocialFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.SocialFragment"
         android:label="fragment_writing"
         tools:layout="@layout/fragment_social" >
         <action
@@ -88,12 +88,12 @@
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.sidharth.chomu.ChatFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/writingFragment2"
-        android:name="com.sidharth.chomu.WritingFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.WritingFragment"
         android:label="fragment_writing"
         tools:layout="@layout/fragment_writing" >
         <action
