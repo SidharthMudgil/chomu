@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_homeFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_writingFragment2"
+            app:destination="@id/writingFragment2" />
     </fragment>
     <fragment
         android:id="@+id/emailFragment"
@@ -88,4 +91,13 @@
         android:name="com.sidharth.chomu.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/writingFragment2"
+        android:name="com.sidharth.chomu.WritingFragment"
+        android:label="fragment_writing"
+        tools:layout="@layout/fragment_writing" >
+        <action
+            android:id="@+id/action_writingFragment2_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
 </navigation>
