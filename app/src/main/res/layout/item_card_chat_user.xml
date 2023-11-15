@@ -8,4 +8,6 @@
     android:background="@drawable/bg_message_user"
     android:gravity="start"
     android:padding="10dp"
+    android:textColor="@color/white"
+    android:textFontWeight="500"
     tools:text="Hi, I am KSI" />
