@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/app_bar"
-        layout="@layout/top_app_bar"
+        layout="@layout/top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,13 +21,14 @@
         android:id="@+id/et_input"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/materialButton"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_bar" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
