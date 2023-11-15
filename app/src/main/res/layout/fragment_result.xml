@@ -18,6 +18,7 @@
         app:layout_constraintVertical_bias="0" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/materialButton"
