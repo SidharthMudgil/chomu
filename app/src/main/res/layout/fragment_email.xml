@@ -7,7 +7,7 @@
     tools:context=".presentation.fragments.EmailFragment">
 
     <include
-        android:id="@+id/app_bar"
+        android:id="@+id/top_bar"
         layout="@layout/top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
         app:layout_constraintVertical_bias="0" />
 
     <com.google.android.material.textfield.TextInputEditText
