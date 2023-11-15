@@ -4,17 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@android:color/transparent">
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/blue500"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@id/tv_subtitle"
             app:layout_constraintEnd_toStartOf="@id/iv_image"
             app:layout_constraintHorizontal_bias="0"
@@ -27,6 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/iv_image"
             app:layout_constraintHorizontal_bias="0"
@@ -36,14 +48,17 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0" />
+            app:layout_constraintVertical_bias="0"
+            app:shapeAppearance="@style/RoundedCornersShapeOverlay" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
