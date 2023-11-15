@@ -5,4 +5,5 @@
     <string name="tone">Tone</string>
     <string name="formality">Formality</string>
     <string name="generate">Generate</string>
+    <string name="chat_with_chomu">Chat with Chomu...</string>
 </resources>
