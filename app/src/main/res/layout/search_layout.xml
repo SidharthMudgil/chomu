@@ -27,8 +27,8 @@
             android:hint="@string/chat_with_chomu"
             android:paddingStart="@dimen/rounded_content_padding"
             android:paddingEnd="@dimen/rounded_content_padding"
-            android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
+            android:textColor="@color/grey100"
+            android:textColorHint="@color/grey300" />
 
     </com.google.android.material.card.MaterialCardView>
 

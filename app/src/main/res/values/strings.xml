@@ -9,4 +9,8 @@
     <string name="assistants">Assistants</string>
     <string name="grammar_prompt">Type or paste your text here for a grammar correction…</string>
     <string name="summary_prompt">Type or paste your content here to generate a brief summary…</string>
+    <string name="recipient_info">Recipient Info</string>
+    <string name="purpose">Purpose</string>
+    <string name="hint_email">Reply to: \nWe are excited to learn you\'re considering our services.\n\nThank you for contacting us at Diego\'s Appliances.\n\nWe have carefully considered all the details you provided about the number of supplies you\'ll be storing, and we\'re confident that our D103 super cool refrigerator is more than capable of meeting your needs. In addition, if you purchase the refrigerator through our website www.diegoappliances.com, you get free delivery and installation.\n\nWe hope to welcome you soon as a part of the Diego family. Do reach out if you have any more questions or need any extra information.\nThank you!</string>
+    <string name="hint_recipient_info">For Example:\n\nName: Ravish Kumar\nPosition: Senior Software Engineer\n</string>
 </resources>
