@@ -30,5 +30,9 @@ class GrammarFragment : Fragment() {
             val action = GrammarFragmentDirections.actionGrammarFragmentToResultFragment("")
             findNavController().navigate(action)
         }
+        fragmentGrammarBinding.bottomBar.btnAdvance.setOnClickListener {
+            val action = GrammarFragmentDirections.actionGrammarFragmentToAdvanceOptionsBottomSheet()
+            findNavController().navigate(action)
+        }
     }
 }

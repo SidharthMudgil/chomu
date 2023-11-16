@@ -30,5 +30,9 @@ class SocialFragment : Fragment() {
             val action = SocialFragmentDirections.actionSocialFragmentToResultFragment("")
             findNavController().navigate(action)
         }
+        fragmentSocialBinding.bottomBar.btnAdvance.setOnClickListener {
+            val action = SocialFragmentDirections.actionSocialFragmentToAdvanceOptionsBottomSheet()
+            findNavController().navigate(action)
+        }
     }
 }

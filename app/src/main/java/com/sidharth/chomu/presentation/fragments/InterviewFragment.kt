@@ -30,5 +30,9 @@ class InterviewFragment : Fragment() {
             val action = InterviewFragmentDirections.actionInterviewFragmentToResultFragment("")
             findNavController().navigate(action)
         }
+        fragmentInterviewBinding.bottomBar.btnAdvance.setOnClickListener {
+            val action = InterviewFragmentDirections.actionInterviewFragmentToAdvanceOptionsBottomSheet()
+            findNavController().navigate(action)
+        }
     }
 }

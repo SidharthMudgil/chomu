@@ -72,6 +72,9 @@
             app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_emailFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_emailFragment_to_advanceOptionsBottomSheet"
+            app:destination="@id/advanceOptionsBottomSheet" />
     </fragment>
     <fragment
         android:id="@+id/grammarFragment"
@@ -85,6 +88,9 @@
             app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_grammarFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_grammarFragment_to_advanceOptionsBottomSheet"
+            app:destination="@id/advanceOptionsBottomSheet" />
     </fragment>
     <fragment
         android:id="@+id/interviewFragment"
@@ -98,6 +104,9 @@
             app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_interviewFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_interviewFragment_to_advanceOptionsBottomSheet"
+            app:destination="@id/advanceOptionsBottomSheet" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
@@ -120,6 +129,9 @@
             app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_summaryFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_summaryFragment_to_advanceOptionsBottomSheet"
+            app:destination="@id/advanceOptionsBottomSheet" />
     </fragment>
     <fragment
         android:id="@+id/socialFragment"
@@ -133,6 +145,9 @@
             app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_socialFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_socialFragment_to_advanceOptionsBottomSheet"
+            app:destination="@id/advanceOptionsBottomSheet" />
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
@@ -151,5 +166,12 @@
             app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_writingFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_writingFragment_to_advanceOptionsBottomSheet"
+            app:destination="@id/advanceOptionsBottomSheet" />
     </fragment>
+    <dialog
+        android:id="@+id/advanceOptionsBottomSheet"
+        android:name="com.sidharth.chomu.presentation.component.AdvanceOptionsBottomSheet"
+        android:label="AdvanceOptionsBottomSheet" />
 </navigation>

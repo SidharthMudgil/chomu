@@ -30,5 +30,9 @@ class EmailFragment : Fragment() {
             val action = EmailFragmentDirections.actionEmailFragmentToResultFragment("")
             findNavController().navigate(action)
         }
+        fragmentEmailBinding.bottomBar.btnAdvance.setOnClickListener {
+            val action = EmailFragmentDirections.actionEmailFragmentToAdvanceOptionsBottomSheet()
+            findNavController().navigate(action)
+        }
     }
 }

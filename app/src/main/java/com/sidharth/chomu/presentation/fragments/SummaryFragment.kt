@@ -30,5 +30,9 @@ class SummaryFragment : Fragment() {
             val action = SummaryFragmentDirections.actionSummaryFragmentToResultFragment("")
             findNavController().navigate(action)
         }
+        fragmentSummaryBinding.bottomBar.btnAdvance.setOnClickListener {
+            val action = SummaryFragmentDirections.actionSummaryFragmentToAdvanceOptionsBottomSheet()
+            findNavController().navigate(action)
+        }
     }
 }

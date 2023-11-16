@@ -31,5 +31,9 @@ class WritingFragment : Fragment() {
             val action = WritingFragmentDirections.actionWritingFragmentToResultFragment("")
             findNavController().navigate(action)
         }
+        fragmentWritingBinding.bottomBar.btnAdvance.setOnClickListener {
+            val action = WritingFragmentDirections.actionWritingFragmentToAdvanceOptionsBottomSheet()
+            findNavController().navigate(action)
+        }
     }
 }
