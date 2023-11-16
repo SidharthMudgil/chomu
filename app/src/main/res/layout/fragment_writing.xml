@@ -10,7 +10,7 @@
         android:id="@+id/top_bar"
         layout="@layout/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/top_bar_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +21,11 @@
         android:id="@+id/label_content_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:text="@string/content_type"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -32,6 +37,9 @@
         android:id="@+id/cg_content_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/title_space"
+        android:layout_marginEnd="@dimen/white_space"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -40,10 +48,12 @@
         app:layout_constraintVertical_bias="0">
 
         <com.google.android.material.chip.Chip
+            android:text="Poem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <com.google.android.material.chip.Chip
+            android:text="Essay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -61,6 +71,12 @@
         android:id="@+id/label_topic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/white_space"
+        android:text="@string/purpose"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -71,13 +87,25 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_topic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/title_space"
+        android:layout_marginEnd="@dimen/white_space"
+        android:layout_marginBottom="@dimen/white_space"
+        android:background="@drawable/bg_input_text"
+        android:gravity="start"
+        android:hint="View Lifecycle, Coroutines, MVVM"
+        android:padding="@dimen/white_space"
+        android:textColor="@color/grey100"
+        android:textColorHint="@color/grey300"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/label_topic"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintVertical_bias="0"
+        tools:ignore="HardcodedText" />
 
     <include
         android:id="@+id/bottom_bar"
