@@ -11,24 +11,52 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_homeFragment_to_summaryFragment"
             app:destination="@id/summaryFragment" />
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_homeFragment_to_writingFragment"
             app:destination="@id/writingFragment" />
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_homeFragment_to_grammarFragment"
             app:destination="@id/grammarFragment" />
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_homeFragment_to_interviewFragment"
             app:destination="@id/interviewFragment" />
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_homeFragment_to_emailFragment"
             app:destination="@id/emailFragment" />
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_homeFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_homeFragment_to_socialFragment"
             app:destination="@id/socialFragment" />
     </fragment>
@@ -38,6 +66,10 @@
         android:label="fragment_email"
         tools:layout="@layout/fragment_email" >
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_emailFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
@@ -47,6 +79,10 @@
         android:label="fragment_grammar"
         tools:layout="@layout/fragment_grammar" >
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_grammarFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
@@ -56,6 +92,10 @@
         android:label="fragment_interview"
         tools:layout="@layout/fragment_interview" >
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_interviewFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
@@ -74,6 +114,10 @@
         android:label="fragment_summary"
         tools:layout="@layout/fragment_summary" >
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_summaryFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
@@ -83,6 +127,10 @@
         android:label="fragment_writing"
         tools:layout="@layout/fragment_social" >
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_socialFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
@@ -97,6 +145,10 @@
         android:label="fragment_writing"
         tools:layout="@layout/fragment_writing" >
         <action
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_in"
+            app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_writingFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
