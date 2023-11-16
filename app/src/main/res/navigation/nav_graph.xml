@@ -83,7 +83,7 @@
         android:label="fragment_writing"
         tools:layout="@layout/fragment_social" >
         <action
-            android:id="@+id/action_writingFragment_to_resultFragment"
+            android:id="@+id/action_socialFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
     <fragment
@@ -97,7 +97,7 @@
         android:label="fragment_writing"
         tools:layout="@layout/fragment_writing" >
         <action
-            android:id="@+id/action_writingFragment2_to_resultFragment"
+            android:id="@+id/action_writingFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
 </navigation>
