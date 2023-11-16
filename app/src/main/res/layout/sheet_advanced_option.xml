@@ -4,7 +4,6 @@
     style="@style/Widget.Material3.BottomSheet.DragHandle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/white_space"
     app:layout_behavior="@string/bottom_sheet_behavior">
 
     <com.google.android.material.textview.MaterialTextView

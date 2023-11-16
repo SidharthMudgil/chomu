@@ -5,6 +5,7 @@
         <item name="android:windowBackground">@color/blue700</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="fontFamily">@font/montserrat</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
     </style>
 
     <style name="Theme.Chomu" parent="Base.Theme.Chomu" />
@@ -18,4 +19,17 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/corner_radius</item>
     </style>
+
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="Widget.Material3.BottomSheet">
+        <item name="backgroundTint">@color/blue300</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
 </resources>
