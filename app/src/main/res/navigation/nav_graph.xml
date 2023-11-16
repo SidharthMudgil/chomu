@@ -29,8 +29,8 @@
             android:id="@+id/action_homeFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_writingFragment2"
-            app:destination="@id/writingFragment2" />
+            android:id="@+id/action_homeFragment_to_socialFragment"
+            app:destination="@id/socialFragment" />
     </fragment>
     <fragment
         android:id="@+id/emailFragment"
@@ -78,7 +78,7 @@
             app:destination="@id/resultFragment" />
     </fragment>
     <fragment
-        android:id="@+id/writingFragment"
+        android:id="@+id/socialFragment"
         android:name="com.sidharth.chomu.presentation.fragments.SocialFragment"
         android:label="fragment_writing"
         tools:layout="@layout/fragment_social" >
@@ -92,7 +92,7 @@
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
-        android:id="@+id/writingFragment2"
+        android:id="@+id/writingFragment"
         android:name="com.sidharth.chomu.presentation.fragments.WritingFragment"
         android:label="fragment_writing"
         tools:layout="@layout/fragment_writing" >

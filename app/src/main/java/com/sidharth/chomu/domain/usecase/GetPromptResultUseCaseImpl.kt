@@ -9,6 +9,6 @@ class GetPromptResultUseCaseImpl(
 ) : GetPromptResultUseCase {
 
     override suspend fun invoke(prompt: Prompt): PromptResult {
-        return promptRepository.generateResult(prompt)
+        return promptRepository.generateResult(prompt.asd)
     }
 }

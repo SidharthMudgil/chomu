@@ -5,9 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.sidharth.chomu.core.constant.Constants
+import com.sidharth.chomu.core.enums.Assistants
 import com.sidharth.chomu.databinding.FragmentHomeBinding
+import com.sidharth.chomu.presentation.adapter.AssistantAdapter
+import com.sidharth.chomu.presentation.callback.OnAssistantClickCallback
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), OnAssistantClickCallback {
 
     private lateinit var fragmentHomeBinding: FragmentHomeBinding
 
@@ -16,7 +22,49 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         fragmentHomeBinding = FragmentHomeBinding.inflate(inflater)
+        setupRecyclerView()
         return fragmentHomeBinding.root
+    }
+
+    private fun setupRecyclerView() {
+        fragmentHomeBinding.rvCategories.apply {
+            adapter = AssistantAdapter(
+                assistants = Constants.ASSISTANTS,
+                onAssistantClickCallback = this@HomeFragment,
+            )
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+    }
+
+    override fun onAssistantClick(id: Int) {
+        val action = when (id) {
+            Assistants.EMAIL.ordinal -> {
+                HomeFragmentDirections.actionHomeFragmentToEmailFragment()
+            }
+
+            Assistants.WRITING.ordinal -> {
+                HomeFragmentDirections.actionHomeFragmentToWritingFragment()
+            }
+
+            Assistants.SUMMARY.ordinal -> {
+                HomeFragmentDirections.actionHomeFragmentToSummaryFragment()
+            }
+
+            Assistants.GRAMMAR.ordinal -> {
+                HomeFragmentDirections.actionHomeFragmentToGrammarFragment()
+            }
+
+            Assistants.SOCIAL.ordinal -> {
+                HomeFragmentDirections.actionHomeFragmentToSocialFragment()
+            }
+
+            Assistants.INTERVIEW.ordinal -> {
+                HomeFragmentDirections.actionHomeFragmentToInterviewFragment()
+            }
+
+            else -> null
+        }
+        findNavController().navigate(action!!)
     }
 
 }
