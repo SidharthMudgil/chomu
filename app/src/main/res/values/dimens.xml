@@ -3,4 +3,5 @@
     <dimen name="white_space">10dp</dimen>
     <dimen name="corner_radius">12dp</dimen>
     <dimen name="title_space">6dp</dimen>
+    <dimen name="top_bar_size">60dp</dimen>
 </resources>

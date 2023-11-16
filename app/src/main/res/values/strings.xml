@@ -7,4 +7,6 @@
     <string name="generate">Generate</string>
     <string name="chat_with_chomu">Chat with Chomu…</string>
     <string name="assistants">Assistants</string>
+    <string name="grammar_prompt">Type or paste your text here for a grammar correction…</string>
+    <string name="summary_prompt">Type or paste your content here to generate a brief summary…</string>
 </resources>
