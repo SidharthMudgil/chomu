@@ -6,7 +6,7 @@
     android:layout_gravity="start"
     android:background="@drawable/bg_message_chomu"
     android:gravity="start"
-    android:padding="10dp"
+    android:padding="@dimen/white_space"
     android:textColor="@color/white"
     android:textFontWeight="500"
     android:textSize="16sp"

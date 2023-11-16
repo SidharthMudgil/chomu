@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
+    android:layout_marginBottom="@dimen/white_space"
     app:cardBackgroundColor="@color/blue500"
-    app:cardCornerRadius="12dp"
+    app:cardCornerRadius="@dimen/corner_radius"
     app:cardElevation="0dp"
     app:strokeWidth="0dp">
 
@@ -14,9 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="15dp"
-        android:paddingTop="10dp"
+        android:paddingTop="@dimen/white_space"
         android:paddingEnd="15dp"
-        android:paddingBottom="10dp">
+        android:paddingBottom="@dimen/white_space">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_title"
