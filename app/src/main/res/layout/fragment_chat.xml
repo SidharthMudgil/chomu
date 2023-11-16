@@ -10,16 +10,19 @@
         android:id="@+id/rv_chat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/white_space"
         app:layout_constraintBottom_toTopOf="@+id/search_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_card_chat_chomu" />
 
     <include
         android:id="@+id/search_view"
         layout="@layout/search_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/search_bar_size"
+        android:layout_marginBottom="@dimen/white_space"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

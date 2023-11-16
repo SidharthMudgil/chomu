@@ -4,4 +4,7 @@
     <dimen name="corner_radius">12dp</dimen>
     <dimen name="title_space">6dp</dimen>
     <dimen name="top_bar_size">60dp</dimen>
+    <dimen name="search_bar_size">50dp</dimen>
+    <dimen name="image_size_medium">36dp</dimen>
+    <dimen name="rounded_content_padding">15dp</dimen>
 </resources>

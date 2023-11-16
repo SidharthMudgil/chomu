@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="start"
+    android:layout_marginBottom="@dimen/white_space"
     android:background="@drawable/bg_message_chomu"
     android:gravity="start"
     android:padding="@dimen/white_space"

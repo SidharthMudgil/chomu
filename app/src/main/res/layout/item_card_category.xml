@@ -13,9 +13,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="15dp"
+        android:paddingStart="@dimen/rounded_content_padding"
         android:paddingTop="@dimen/white_space"
-        android:paddingEnd="15dp"
+        android:paddingEnd="@dimen/rounded_content_padding"
         android:paddingBottom="@dimen/white_space">
 
         <com.google.android.material.textview.MaterialTextView
@@ -36,7 +36,6 @@
             android:id="@+id/tv_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
             android:textColor="@color/gray"
             android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -48,8 +47,8 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_image"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="@dimen/image_size_medium"
+            android:layout_height="@dimen/image_size_medium"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf="parent"
