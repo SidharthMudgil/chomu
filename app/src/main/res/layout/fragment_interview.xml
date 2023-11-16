@@ -10,7 +10,7 @@
         android:id="@+id/top_bar"
         layout="@layout/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/top_bar_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -19,9 +19,14 @@
         app:layout_constraintVertical_bias="0" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/label_job_type"
+        android:id="@+id/label_job_role"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:text="@string/job_role"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -29,94 +34,57 @@
         app:layout_constraintTop_toBottomOf="@id/top_bar"
         app:layout_constraintVertical_bias="0" />
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/cg_job_type"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_job_role"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_job_type"
-        app:layout_constraintVertical_bias="0">
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.chip.ChipGroup>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/label_job_category"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/search_bar_size"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/title_space"
+        android:layout_marginEnd="@dimen/white_space"
+        android:background="@drawable/bg_input_text"
+        android:ellipsize="end"
+        android:gravity="start|center"
+        android:hint="Android Developer"
+        android:inputType="text"
+        android:maxLength="80"
+        android:maxLines="1"
+        android:padding="@dimen/white_space"
+        android:textColor="@color/grey100"
+        android:textColorHint="@color/grey300"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cg_job_type"
-        app:layout_constraintVertical_bias="0" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/cg_job_category"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_job_category"
-        app:layout_constraintVertical_bias="0">
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.chip.ChipGroup>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/label_job_role"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cg_job_category"
-        app:layout_constraintVertical_bias="0" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/cg_job_role"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_job_role"
-        app:layout_constraintVertical_bias="0">
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.chip.ChipGroup>
+        app:layout_constraintTop_toBottomOf="@+id/label_job_role"
+        app:layout_constraintVertical_bias="0"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/label_experience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/white_space"
+        android:text="@string/experience"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cg_job_role"
+        app:layout_constraintTop_toBottomOf="@id/et_job_role"
         app:layout_constraintVertical_bias="0" />
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/cg_experience"
+        style="@style/Widget.Material3.ChipGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/title_space"
+        android:layout_marginEnd="@dimen/white_space"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -125,20 +93,28 @@
         app:layout_constraintVertical_bias="0">
 
         <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Internship" />
 
         <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Entry Level" />
 
         <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Intermediate" />
 
         <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Professional" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -146,6 +122,12 @@
         android:id="@+id/label_focus_point"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/white_space"
+        android:text="@string/focus_point"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -157,6 +139,9 @@
         android:id="@+id/cg_focus_point"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/title_space"
+        android:layout_marginEnd="@dimen/white_space"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -165,8 +150,46 @@
         app:layout_constraintVertical_bias="0">
 
         <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="example point" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example point" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example point" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example point" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example point" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example point" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example point" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -174,6 +197,12 @@
         android:id="@+id/label_topic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/white_space"
+        android:text="@string/topics"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -184,13 +213,25 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/et_topic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/white_space"
+        android:layout_marginTop="@dimen/title_space"
+        android:layout_marginEnd="@dimen/white_space"
+        android:layout_marginBottom="@dimen/white_space"
+        android:background="@drawable/bg_input_text"
+        android:gravity="start"
+        android:hint="View Lifecycle, Coroutines, MVVM"
+        android:padding="@dimen/white_space"
+        android:textColor="@color/grey100"
+        android:textColorHint="@color/grey300"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/label_topic"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintVertical_bias="0"
+        tools:ignore="HardcodedText" />
 
     <include
         android:id="@+id/bottom_bar"
