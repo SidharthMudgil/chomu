@@ -66,6 +66,7 @@
             android:id="@+id/chip_short_story"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/content_short_story" />
 
         <com.google.android.material.chip.Chip
@@ -112,15 +113,15 @@
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_review"
-            android:text="@string/content_review"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/content_review" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_speech"
-            android:text="@string/content_speech"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/content_speech" />
 
     </com.google.android.material.chip.ChipGroup>
 

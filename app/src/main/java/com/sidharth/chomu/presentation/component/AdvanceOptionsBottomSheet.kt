@@ -14,6 +14,36 @@ class AdvanceOptionsBottomSheet : BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return SheetAdvancedOptionBinding.inflate(inflater).root
+        val binding = SheetAdvancedOptionBinding.inflate(inflater)
+
+        binding.btnCancel.setOnClickListener {
+            dismiss()
+        }
+
+        binding.btnApply.setOnClickListener {
+//            findNavController().previousBackStackEntry?.savedStateHandle?.set(
+//
+//            )
+            dismiss()
+        }
+
+        return binding.root
     }
+
+    companion object {
+
+    }
+
+//      TODO(copy paste below code to each fragment where data is needed)
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        findNavController().currentBackStackEntry
+//            ?.savedStateHandle
+//            ?.getLiveData<Int>(ModalBottomSheet.KEY)
+//            ?.observe(viewLifecycleOwner) { collection ->
+//                if (args.game != null || game != null) {
+//                    userDataViewModel.addGameToCollection(args.game ?: game!!, collection)
+//                }
+//            }
+//    }
 }

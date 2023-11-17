@@ -99,6 +99,7 @@
             android:id="@+id/chip_internship"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/experience_internship" />
 
         <com.google.android.material.chip.Chip
@@ -159,6 +160,7 @@
             android:id="@+id/chip_background_experience"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/focus_point_background_experience" />
 
         <com.google.android.material.chip.Chip

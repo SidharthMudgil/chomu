@@ -44,6 +44,7 @@
             android:id="@+id/chip_neutral"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/neutral" />
 
         <com.google.android.material.chip.Chip
@@ -88,6 +89,7 @@
             android:id="@+id/chip_optimistic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/tone_optimistic" />
 
         <com.google.android.material.chip.Chip
@@ -173,6 +175,7 @@
             android:id="@+id/chip_short"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/length_short" />
 
         <com.google.android.material.chip.Chip
@@ -223,6 +226,7 @@
             android:id="@+id/chip_none"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/style_none" />
 
         <com.google.android.material.chip.Chip
@@ -281,12 +285,12 @@
         app:backgroundTint="@color/blue600"
         app:cornerRadius="@dimen/corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_appy"
+        app:layout_constraintEnd_toStartOf="@+id/btn_apply"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cg_style" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_appy"
+        android:id="@+id/btn_apply"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
