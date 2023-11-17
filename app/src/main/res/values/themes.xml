@@ -6,9 +6,19 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="fontFamily">@font/montserrat</item>
         <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+        <item name="chipStyle">@style/Widget.App.Chip</item>
     </style>
 
     <style name="Theme.Chomu" parent="Base.Theme.Chomu" />
+
+    <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Suggestion">
+        <item name="chipBackgroundColor">@color/bg_chip</item>
+        <item name="chipStrokeWidth">2dp</item>
+        <item name="chipStrokeColor">@color/blue500</item>
+        <item name="android:textColor">@color/grey100</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedCornersShapeOverlay</item>
+    </style>
 
     <style name="CircularShapeOverlay">
         <item name="cornerFamily">rounded</item>

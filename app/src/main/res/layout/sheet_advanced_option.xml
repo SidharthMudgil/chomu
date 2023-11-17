@@ -30,19 +30,27 @@
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_formality"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_casual"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/casual" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_neutral"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/neutral" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_formal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/formal" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -66,41 +74,69 @@
         android:id="@+id/cg_tone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:chipSpacingVertical="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_tone"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_optimistic"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/tone_optimistic" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_worried"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/tone_worried" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_friendly"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/tone_friendly" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_curious"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/tone_curious" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_assertive"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/tone_assertive" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_encouraging"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"
+            android:text="@string/tone_encouraging" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_surprised"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/tone_surprised" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_engaging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tone_engaging" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_cooperative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tone_cooperative" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -129,19 +165,27 @@
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_length"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_short"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/length_short" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_medium"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/length_medium" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_long"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/length_long" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -165,25 +209,93 @@
         android:id="@+id/cg_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:chipSpacingVertical="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_style"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_none"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/style_none" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_poetic"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/style_poetic" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_philosopher"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/style_philosopher" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_chef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/style_chef" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_explorer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/style_explorer" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_scientist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/style_scientist" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_comedian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/style_comedian" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_futurist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/style_futurist" />
 
     </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/white_space"
+        android:layout_marginEnd="10dp"
+        android:text="@string/cancel"
+        android:textFontWeight="600"
+        app:backgroundTint="@color/blue500"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_appy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cg_style" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_appy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/apply"
+        android:textFontWeight="600"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel"
+        app:layout_constraintTop_toTopOf="@+id/btn_cancel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

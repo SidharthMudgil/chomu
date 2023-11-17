@@ -1,11 +1,13 @@
 package com.sidharth.chomu.core.enums
 
 enum class ResultTone {
-    PERSONABLE,
-    CONFIDENT,
-    EMPATHETIC,
+    OPTIMISTIC,
+    WORRIED,
+    FRIENDLY,
+    CURIOUS,
+    ASSERTIVE,
+    ENCOURAGING,
+    SURPRISED,
     ENGAGING,
-    WITTY,
-    DIRECT,
-    OPTIMISTIC
+    COOPERATIVE
 }
