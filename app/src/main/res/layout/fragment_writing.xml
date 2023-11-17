@@ -40,28 +40,85 @@
         android:layout_marginStart="@dimen/white_space"
         android:layout_marginTop="@dimen/title_space"
         android:layout_marginEnd="@dimen/white_space"
+        app:chipSpacingVertical="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_content_type"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
-            android:text="Poem"
+            android:id="@+id/chip_essay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_essay" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_poetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_poetry" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_short_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_short_story" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_novel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_novel" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_article"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_article" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_technical_writing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_technical_writing" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_script_screenplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_script_screenplay" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_journalism"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_journalism" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_letter" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_blog_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_blog_post" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_review"
+            android:text="@string/content_review"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <com.google.android.material.chip.Chip
-            android:text="Essay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_speech"
+            android:text="@string/content_speech"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -73,7 +130,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/white_space"
         android:layout_marginTop="@dimen/white_space"
-        android:text="@string/purpose"
+        android:text="@string/topic"
         android:textColor="@color/white"
         android:textFontWeight="500"
         android:textSize="16sp"
@@ -94,7 +151,7 @@
         android:layout_marginBottom="@dimen/white_space"
         android:background="@drawable/bg_input_text"
         android:gravity="start"
-        android:hint="View Lifecycle, Coroutines, MVVM"
+        android:hint="A thirsty Crow"
         android:padding="@dimen/white_space"
         android:textColor="@color/grey100"
         android:textColorHint="@color/grey300"
@@ -112,6 +169,7 @@
         layout="@layout/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/white_space"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

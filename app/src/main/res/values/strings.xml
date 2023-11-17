@@ -7,15 +7,26 @@
     <string name="purpose">Purpose</string>
     <string name="content_type">Content Type</string>
 
-<!--    Writing Fragment -->
-    <string name="none">None</string>
+    <!--    Writing Fragment -->
+    <string name="topic">Topic</string>
+    <string name="content_essay">Essay</string>
+    <string name="content_poetry">Poetry</string>
+    <string name="content_short_story">Short Story</string>
+    <string name="content_novel">Novel</string>
+    <string name="content_article">Article</string>
+    <string name="content_technical_writing">Technical Writing</string>
+    <string name="content_script_screenplay">Script/Screenplay</string>
+    <string name="content_journalism">Journalism</string>
+    <string name="content_letter">Letter</string>
+    <string name="content_blog_post">Blog Post</string>
+    <string name="content_review">Review</string>
+    <string name="content_speech">Speech</string>
 
-
-<!--    Summary & Grammar Fragment -->
+    <!--    Summary & Grammar Fragment -->
     <string name="summary_prompt">Type or paste your content here to generate a brief summary…</string>
     <string name="grammar_prompt">Type or paste your text here for a grammar correction…</string>
 
-<!--    Email Fragment -->
+    <!--    Email Fragment -->
     <string name="recipient_info">Recipient Info</string>
     <string name="hint_recipient_info">For Example:\n\nName: Ravish Kumar\nPosition: Senior Software Engineer\n</string>
     <string name="hint_email">Reply to: \nWe are excited to learn you\'re considering our services.\n\nThank you for contacting us at Diego\'s Appliances.\n\nWe have carefully considered all the details you provided about the number of supplies you\'ll be storing, and we\'re confident that our D103 super cool refrigerator is more than capable of meeting your needs. In addition, if you purchase the refrigerator through our website www.diegoappliances.com, you get free delivery and installation.\n\nWe hope to welcome you soon as a part of the Diego family. Do reach out if you have any more questions or need any extra information.\nThank you!</string>
@@ -23,7 +34,7 @@
     <string name="job_role">Job Role</string>
     <string name="topics">Topics</string>
 
-<!--    Social Fragment -->
+    <!--    Social Fragment -->
     <string name="focus_point">Focus Point</string>
 
 
@@ -45,7 +56,7 @@
     <string name="platform_twitter">Twitter</string>
     <string name="platform_linkedin">LinkedIn</string>
 
-<!--  Advance Option Bottom Sheet  -->
+    <!--  Advance Option Bottom Sheet  -->
     <string name="cancel">Cancel</string>
     <string name="apply">Apply</string>
 
