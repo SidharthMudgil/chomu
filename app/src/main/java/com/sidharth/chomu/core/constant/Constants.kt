@@ -4,7 +4,7 @@ import com.sidharth.chomu.R
 import com.sidharth.chomu.domain.model.Assistant
 
 object Constants {
-    const val BASE_URL = ""
+    const val BASE_URL = "https://api.openai.com/v1/chat/completions"
     val ASSISTANTS = listOf(
         Assistant(
             id = 0,
