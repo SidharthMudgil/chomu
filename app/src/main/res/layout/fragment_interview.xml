@@ -244,7 +244,7 @@
         android:layout_marginBottom="@dimen/white_space"
         android:background="@drawable/bg_input_text"
         android:gravity="start"
-        android:hint="View Lifecycle, Coroutines, MVVM"
+        android:hint="View Lifecycle, Coroutines, MVVM..."
         android:padding="@dimen/white_space"
         android:textColor="@color/grey100"
         android:textColorHint="@color/grey300"

@@ -1,6 +1,6 @@
 package com.sidharth.chomu.core.enums
 
-enum class ResultRole {
+enum class AssistantRole {
     SYSTEM,
     ASSISTANT,
     USER,
