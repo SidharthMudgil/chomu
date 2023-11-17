@@ -14,8 +14,8 @@
     <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Suggestion">
         <item name="chipBackgroundColor">@color/bg_chip</item>
         <item name="chipStrokeWidth">2dp</item>
-        <item name="chipStrokeColor">@color/blue500</item>
-        <item name="android:textColor">@color/grey100</item>
+        <item name="chipStrokeColor">@color/blue300</item>
+        <item name="android:textColor">@color/white</item>
         <item name="checkedIconVisible">false</item>
         <item name="shapeAppearanceOverlay">@style/RoundedCornersShapeOverlay</item>
     </style>
@@ -35,7 +35,7 @@
     </style>
 
     <style name="ModalBottomSheetDialog" parent="Widget.Material3.BottomSheet">
-        <item name="backgroundTint">@color/blue300</item>
+        <item name="backgroundTint">@color/blue500</item>
         <item name="android:paddingTop">20dp</item>
         <item name="android:paddingStart">10dp</item>
         <item name="android:paddingEnd">10dp</item>

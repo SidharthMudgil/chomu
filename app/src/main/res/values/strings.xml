@@ -5,21 +5,47 @@
 
     <string name="generate">Generate</string>
     <string name="purpose">Purpose</string>
+    <string name="content_type">Content Type</string>
+
+<!--    Writing Fragment -->
+    <string name="none">None</string>
+
+
+<!--    Summary & Grammar Fragment -->
     <string name="summary_prompt">Type or paste your content here to generate a brief summary…</string>
     <string name="grammar_prompt">Type or paste your text here for a grammar correction…</string>
 
+<!--    Email Fragment -->
     <string name="recipient_info">Recipient Info</string>
     <string name="hint_recipient_info">For Example:\n\nName: Ravish Kumar\nPosition: Senior Software Engineer\n</string>
     <string name="hint_email">Reply to: \nWe are excited to learn you\'re considering our services.\n\nThank you for contacting us at Diego\'s Appliances.\n\nWe have carefully considered all the details you provided about the number of supplies you\'ll be storing, and we\'re confident that our D103 super cool refrigerator is more than capable of meeting your needs. In addition, if you purchase the refrigerator through our website www.diegoappliances.com, you get free delivery and installation.\n\nWe hope to welcome you soon as a part of the Diego family. Do reach out if you have any more questions or need any extra information.\nThank you!</string>
 
     <string name="job_role">Job Role</string>
-    <string name="focus_point">Focus Point</string>
-    <string name="experience">Experience</string>
     <string name="topics">Topics</string>
 
-    <string name="platform">Platform</string>
-    <string name="content_type">Content Type</string>
+<!--    Social Fragment -->
+    <string name="focus_point">Focus Point</string>
 
+
+    <string name="experience">Experience</string>
+    <string name="experience_internship">Internship</string>
+    <string name="experience_entry_level">Entry Level</string>
+    <string name="experience_intermediate">Intermediate</string>
+    <string name="experience_professional">Professional</string>
+
+    <string name="content_message">Cold Message</string>
+    <string name="content_text_post">Text Post</string>
+    <string name="content_image_caption">Image Caption</string>
+    <string name="content_link_description">Link Description</string>
+
+    <string name="platform">Platform</string>
+    <string name="platform_threads">Threads</string>
+    <string name="platform_instagram">Instagram</string>
+    <string name="platform_facebook">Facebook</string>
+    <string name="platform_twitter">Twitter</string>
+    <string name="platform_linkedin">LinkedIn</string>
+
+<!--  Advance Option Bottom Sheet  -->
     <string name="cancel">Cancel</string>
     <string name="apply">Apply</string>
 

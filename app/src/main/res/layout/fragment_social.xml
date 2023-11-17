@@ -40,37 +40,45 @@
         android:layout_marginStart="@dimen/white_space"
         android:layout_marginTop="@dimen/title_space"
         android:layout_marginEnd="@dimen/white_space"
+        app:chipSpacingVertical="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_platform"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_linkedin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LinkedIn" />
+            android:text="@string/platform_linkedin" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_twitter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Twitter" />
+            android:text="@string/platform_twitter" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Facebook" />
+            android:text="@string/platform_facebook" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_instagram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Instagram" />
+            android:text="@string/platform_instagram" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_threads"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Threads" />
+            android:text="@string/platform_threads" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -98,32 +106,39 @@
         android:layout_marginStart="@dimen/white_space"
         android:layout_marginTop="@dimen/title_space"
         android:layout_marginEnd="@dimen/white_space"
+        app:chipSpacingVertical="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_content_type"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cold Message" />
+            android:text="@string/content_message" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Text Post" />
+            android:text="@string/content_text_post" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Image Caption" />
+            android:text="@string/content_image_caption" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Link Description" />
+            android:text="@string/content_link_description" />
 
     </com.google.android.material.chip.ChipGroup>
 
