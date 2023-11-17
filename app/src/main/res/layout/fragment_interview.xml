@@ -85,36 +85,39 @@
         android:layout_marginStart="@dimen/white_space"
         android:layout_marginTop="@dimen/title_space"
         android:layout_marginEnd="@dimen/white_space"
+        app:chipSpacingVertical="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/label_experience"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_internship"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Internship" />
+            android:text="@string/experience_internship" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_entry_level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Entry Level" />
+            android:text="@string/experience_entry_level" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_intermediate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Intermediate" />
+            android:text="@string/experience_intermediate" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_professional"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Professional" />
+            android:text="@string/experience_professional" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -142,54 +145,75 @@
         android:layout_marginStart="@dimen/white_space"
         android:layout_marginTop="@dimen/title_space"
         android:layout_marginEnd="@dimen/white_space"
+        app:chipSpacingVertical="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/label_focus_point"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_background_experience"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="example point" />
+            android:text="@string/focus_point_background_experience" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_career_goals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="example point" />
+            android:text="@string/focus_point_career_goals" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_company_knowledge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="example point" />
+            android:text="@string/focus_point_company_knowledge" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_technical_skills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="example point" />
+            android:text="@string/focus_point_technical_skills" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_interpersonal_skills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="example point" />
+            android:text="@string/focus_point_interpersonal_skills" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_adaptability_flexibility"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="example point" />
+            android:text="@string/focus_point_adaptability_flexibility" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.Material3.Chip.Filter"
+            android:id="@+id/chip_problem_solving"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="example point" />
+            android:text="@string/focus_point_problem_solving" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_leadership_management"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/focus_point_leadership_management" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_time_management"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/focus_point_time_management" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_teamwork_collaboration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/focus_point_teamwork_collaboration" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -238,6 +262,7 @@
         layout="@layout/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/white_space"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

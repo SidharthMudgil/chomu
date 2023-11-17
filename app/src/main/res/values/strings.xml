@@ -31,12 +31,21 @@
     <string name="hint_recipient_info">For Example:\n\nName: Ravish Kumar\nPosition: Senior Software Engineer\n</string>
     <string name="hint_email">Reply to: \nWe are excited to learn you\'re considering our services.\n\nThank you for contacting us at Diego\'s Appliances.\n\nWe have carefully considered all the details you provided about the number of supplies you\'ll be storing, and we\'re confident that our D103 super cool refrigerator is more than capable of meeting your needs. In addition, if you purchase the refrigerator through our website www.diegoappliances.com, you get free delivery and installation.\n\nWe hope to welcome you soon as a part of the Diego family. Do reach out if you have any more questions or need any extra information.\nThank you!</string>
 
+    <!-- Internship Fragment -->
     <string name="job_role">Job Role</string>
     <string name="topics">Topics</string>
 
-    <!--    Social Fragment -->
     <string name="focus_point">Focus Point</string>
-
+    <string name="focus_point_background_experience">Background and Experience</string>
+    <string name="focus_point_career_goals">Career Goals</string>
+    <string name="focus_point_company_knowledge">Company Knowledge</string>
+    <string name="focus_point_technical_skills">Technical Skills</string>
+    <string name="focus_point_interpersonal_skills">Interpersonal Skills</string>
+    <string name="focus_point_adaptability_flexibility">Adaptability and Flexibility</string>
+    <string name="focus_point_problem_solving">Problem Solving</string>
+    <string name="focus_point_leadership_management">Leadership and Management</string>
+    <string name="focus_point_time_management">Time Management</string>
+    <string name="focus_point_teamwork_collaboration">Teamwork and Collaboration</string>
 
     <string name="experience">Experience</string>
     <string name="experience_internship">Internship</string>
@@ -44,6 +53,7 @@
     <string name="experience_intermediate">Intermediate</string>
     <string name="experience_professional">Professional</string>
 
+    <!--    Social Fragment -->
     <string name="content_message">Cold Message</string>
     <string name="content_text_post">Text Post</string>
     <string name="content_image_caption">Image Caption</string>
