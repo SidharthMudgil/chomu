@@ -5,4 +5,5 @@ data class Assistant(
     val title: String,
     val subtitle: String,
     val image: Int,
+    val command: String
 )
