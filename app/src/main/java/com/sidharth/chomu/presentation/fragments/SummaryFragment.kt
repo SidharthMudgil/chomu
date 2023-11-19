@@ -1,11 +1,13 @@
 package com.sidharth.chomu.presentation.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.sidharth.chomu.R
+import com.sidharth.chomu.core.constant.Constants
 import com.sidharth.chomu.databinding.FragmentSummaryBinding
 
 class SummaryFragment : Fragment() {
@@ -25,14 +27,23 @@ class SummaryFragment : Fragment() {
         fragmentSummaryBinding.topBar.btnBack.setOnClickListener {
             findNavController().navigateUp()
         }
-        fragmentSummaryBinding.topBar.tvTitle.text = "Summary"
+        fragmentSummaryBinding.topBar.tvTitle.text = getString(R.string.summary)
         fragmentSummaryBinding.bottomBar.btnGenerate.setOnClickListener {
-            val action = SummaryFragmentDirections.actionSummaryFragmentToResultFragment("")
-            findNavController().navigate(action)
+            if (isInputValid()) {
+                val action = SummaryFragmentDirections.actionSummaryFragmentToResultFragment(
+                    prompt = fragmentSummaryBinding.etInput.text.toString(),
+                    command = Constants.COMMAND_SUMMARY
+                )
+                findNavController().navigate(action)
+            }
         }
         fragmentSummaryBinding.bottomBar.btnAdvance.setOnClickListener {
             val action = SummaryFragmentDirections.actionSummaryFragmentToAdvanceOptionsBottomSheet()
             findNavController().navigate(action)
         }
+    }
+
+    private fun isInputValid(): Boolean {
+        return fragmentSummaryBinding.etInput.text.isNullOrBlank().not()
     }
 }
