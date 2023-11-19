@@ -1,7 +1,6 @@
 package com.sidharth.chomu.presentation
 
 import android.os.Bundle
-import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -36,15 +35,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         setupNetworkCallback()
-        setupBackPressedDispatcher()
     }
 
-    private fun setupBackPressedDispatcher() {
-        onBackPressedDispatcher.addCallback {
-            navHostFragment?.findNavController()?.currentDestination?.let {
-                if (it.id != R.id.noNetworkFragment) {
-                    navHostFragment?.findNavController()?.navigateUp()
-                }
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        navHostFragment?.findNavController()?.currentDestination?.let {
+            if (it.id != R.id.noNetworkFragment) {
+                super.onBackPressed()
             }
         }
     }
