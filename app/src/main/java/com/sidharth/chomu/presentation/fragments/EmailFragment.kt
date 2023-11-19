@@ -1,11 +1,13 @@
 package com.sidharth.chomu.presentation.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.sidharth.chomu.R
+import com.sidharth.chomu.core.constant.Constants
 import com.sidharth.chomu.databinding.FragmentEmailBinding
 
 class EmailFragment : Fragment() {
@@ -25,14 +27,24 @@ class EmailFragment : Fragment() {
         fragmentEmailBinding.topBar.btnBack.setOnClickListener {
             findNavController().navigateUp()
         }
-        fragmentEmailBinding.topBar.tvTitle.text = "Email"
+        fragmentEmailBinding.topBar.tvTitle.text = getString(R.string.email)
         fragmentEmailBinding.bottomBar.btnGenerate.setOnClickListener {
-            val action = EmailFragmentDirections.actionEmailFragmentToResultFragment("")
-            findNavController().navigate(action)
+            if (isInputValid()) {
+                val action = EmailFragmentDirections.actionEmailFragmentToResultFragment(
+                    prompt = "recipient info: ${fragmentEmailBinding.etRecipientInfo.text}" +
+                            "purpose: ${fragmentEmailBinding.etPurpose.text}",
+                    command = Constants.COMMAND_EMAIL
+                )
+                findNavController().navigate(action)
+            }
         }
         fragmentEmailBinding.bottomBar.btnAdvance.setOnClickListener {
             val action = EmailFragmentDirections.actionEmailFragmentToAdvanceOptionsBottomSheet()
             findNavController().navigate(action)
         }
+    }
+
+    private fun isInputValid(): Boolean {
+        return (fragmentEmailBinding.etPurpose.text.isNullOrBlank() && fragmentEmailBinding.etRecipientInfo.text.isNullOrBlank()).not()
     }
 }
