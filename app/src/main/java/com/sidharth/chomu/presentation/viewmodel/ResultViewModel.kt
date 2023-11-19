@@ -25,8 +25,8 @@ class ResultViewModel @Inject constructor(
         getPromptResultUseCase.invoke(
             message = prompt,
             command = command
-        ).apply {
-            _result.emit(this)
+        ).collect {
+            _result.emit(it)
         }
     }
 }
