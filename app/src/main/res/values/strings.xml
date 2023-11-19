@@ -100,4 +100,8 @@
     <string name="style_scientist">🔬 Scientist</string>
     <string name="style_comedian">🤡 Comedian</string>
     <string name="style_futurist">🚀 Futurist</string>
+
+    <!-- No Network Fragment -->
+    <string name="no_network_label">No Network Connection</string>
+    <string name="no_network_description">Unable to connect to the internet. Please check your network settings and try again.</string>
 </resources>
