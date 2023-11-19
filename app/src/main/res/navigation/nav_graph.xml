@@ -59,6 +59,9 @@
             app:popExitAnim="@anim/pop_out"
             android:id="@+id/action_homeFragment_to_socialFragment"
             app:destination="@id/socialFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
     </fragment>
     <fragment
         android:id="@+id/emailFragment"
@@ -75,6 +78,9 @@
         <action
             android:id="@+id/action_emailFragment_to_advanceOptionsBottomSheet"
             app:destination="@id/advanceOptionsBottomSheet" />
+        <action
+            android:id="@+id/action_emailFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
     </fragment>
     <fragment
         android:id="@+id/grammarFragment"
@@ -91,6 +97,9 @@
         <action
             android:id="@+id/action_grammarFragment_to_advanceOptionsBottomSheet"
             app:destination="@id/advanceOptionsBottomSheet" />
+        <action
+            android:id="@+id/action_grammarFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
     </fragment>
     <fragment
         android:id="@+id/interviewFragment"
@@ -107,6 +116,9 @@
         <action
             android:id="@+id/action_interviewFragment_to_advanceOptionsBottomSheet"
             app:destination="@id/advanceOptionsBottomSheet" />
+        <action
+            android:id="@+id/action_interviewFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
@@ -116,6 +128,9 @@
         <argument
             android:name="prompt"
             app:argType="string" />
+        <action
+            android:id="@+id/action_resultFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
@@ -132,6 +147,9 @@
         <action
             android:id="@+id/action_summaryFragment_to_advanceOptionsBottomSheet"
             app:destination="@id/advanceOptionsBottomSheet" />
+        <action
+            android:id="@+id/action_summaryFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
     </fragment>
     <fragment
         android:id="@+id/socialFragment"
@@ -148,12 +166,19 @@
         <action
             android:id="@+id/action_socialFragment_to_advanceOptionsBottomSheet"
             app:destination="@id/advanceOptionsBottomSheet" />
+        <action
+            android:id="@+id/action_socialFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
         android:name="com.sidharth.chomu.presentation.fragments.ChatFragment"
         android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
+    </fragment>
     <fragment
         android:id="@+id/writingFragment"
         android:name="com.sidharth.chomu.presentation.fragments.WritingFragment"
@@ -169,9 +194,17 @@
         <action
             android:id="@+id/action_writingFragment_to_advanceOptionsBottomSheet"
             app:destination="@id/advanceOptionsBottomSheet" />
+        <action
+            android:id="@+id/action_writingFragment_to_noNetworkFragment"
+            app:destination="@id/noNetworkFragment" />
     </fragment>
     <dialog
         android:id="@+id/advanceOptionsBottomSheet"
         android:name="com.sidharth.chomu.presentation.component.AdvanceOptionsBottomSheet"
         android:label="AdvanceOptionsBottomSheet" />
+    <fragment
+        android:id="@+id/noNetworkFragment"
+        android:name="com.sidharth.chomu.presentation.fragments.NoNetworkFragment"
+        android:label="fragment_no_network"
+        tools:layout="@layout/fragment_no_network" />
 </navigation>
