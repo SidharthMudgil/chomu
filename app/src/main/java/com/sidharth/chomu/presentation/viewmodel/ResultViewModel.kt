@@ -2,7 +2,6 @@ package com.sidharth.chomu.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sidharth.chomu.domain.model.Assistant
 import com.sidharth.chomu.domain.model.PromptResult
 import com.sidharth.chomu.domain.usecase.GetPromptResultUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -21,11 +20,11 @@ class ResultViewModel @Inject constructor(
 
     suspend fun fetchResult(
         prompt: String,
-        assistant: Assistant
+        command: String,
     ) = viewModelScope.launch {
         getPromptResultUseCase.invoke(
             message = prompt,
-            assistant = assistant
+            command = command
         ).apply {
             _result.emit(this)
         }

@@ -10,6 +10,8 @@
     <!--Result Fragment -->
     <string name="re_generate">Re Generate</string>
     <string name="result">Result</string>
+    <string name="typing">Typing…</string>
+    <string name="result_error">Unexpected Error Occurred, Please try again</string>
 
     <!--    Writing Fragment -->
     <string name="writing">Writing</string>
