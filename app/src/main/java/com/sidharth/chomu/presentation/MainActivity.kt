@@ -16,7 +16,9 @@ import com.sidharth.chomu.presentation.fragments.ResultFragmentDirections
 import com.sidharth.chomu.presentation.fragments.SocialFragmentDirections
 import com.sidharth.chomu.presentation.fragments.SummaryFragmentDirections
 import com.sidharth.chomu.presentation.fragments.WritingFragmentDirections
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val activityMainBinding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
@@ -37,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         setupNetworkCallback()
     }
 
+    @Suppress("DEPRECATION")
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         navHostFragment?.findNavController()?.currentDestination?.let {

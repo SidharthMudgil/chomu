@@ -16,8 +16,10 @@ import com.sidharth.chomu.R
 import com.sidharth.chomu.databinding.FragmentResultBinding
 import com.sidharth.chomu.domain.model.PromptResult
 import com.sidharth.chomu.presentation.viewmodel.ResultViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class ResultFragment : Fragment() {
 
     private val resultViewModel: ResultViewModel by viewModels()
