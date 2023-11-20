@@ -34,6 +34,17 @@ git clone https://github.com/SidharthMudgil/chomu.git
 
 3. Locate the downloaded APK file and install it on your Android device.
 
+### API Key Configuration
+Add your API key to the project by following these steps:
+
+1. Open the local.properties file in the root directory of your project.
+
+2. Add the following line with your API key:
+
+```
+API_KEY=your_api_key
+```
+
 ## License
 This project is licensed under the [GPL-3.0](LICENSE).
 
