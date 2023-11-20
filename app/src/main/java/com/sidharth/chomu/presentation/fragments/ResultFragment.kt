@@ -1,6 +1,7 @@
 package com.sidharth.chomu.presentation.fragments
 
 import android.os.Bundle
+import android.text.Html
 import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
@@ -52,15 +53,22 @@ class ResultFragment : Fragment() {
                 resultViewModel.result.collect {
                     when (it) {
                         is PromptResult.Error -> {
+                            fragmentResultBinding.bottomBar.btnGenerate.isClickable = true
                             fragmentResultBinding.tvResult.text = getString(R.string.result_error)
                         }
 
                         PromptResult.Loading -> {
+                            fragmentResultBinding.bottomBar.btnGenerate.isClickable = false
                             fragmentResultBinding.tvResult.text = getString(R.string.typing)
                         }
 
                         is PromptResult.Success -> {
-                            fragmentResultBinding.tvResult.text = it.data
+                            fragmentResultBinding.bottomBar.btnGenerate.isClickable = true
+                            var result = it.data
+                            result = result.removePrefix("'''html")
+                            result = result.removePrefix("'''")
+                            result = result.removeSuffix("'''")
+                            fragmentResultBinding.tvResult.text = Html.fromHtml(result, Html.FROM_HTML_MODE_LEGACY)
                         }
                     }
                 }
