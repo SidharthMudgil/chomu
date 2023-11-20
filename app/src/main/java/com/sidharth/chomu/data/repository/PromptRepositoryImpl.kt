@@ -1,6 +1,5 @@
 package com.sidharth.chomu.data.repository
 
-import android.util.Log
 import com.google.gson.Gson
 import com.sidharth.chomu.data.remote.ChomuResponse
 import com.sidharth.chomu.data.remote.ChomuService
@@ -17,9 +16,7 @@ class PromptRepositoryImpl @Inject constructor(
     override suspend fun generateResult(prompt: Prompt) = flow {
         emit(PromptResult.Loading)
         val promptResult = chomuService.getPromptResult(prompt)
-        Log.d("response  error", promptResult.errorBody()?.string().toString())
         val response = promptResult.body()?.string()
-        Log.d("response", response.toString())
 
         if (promptResult.isSuccessful) {
             if (response.isNullOrBlank().not()) {
