@@ -1,6 +1,8 @@
 package com.sidharth.chomu.di
 
 import com.sidharth.chomu.domain.repository.PromptRepository
+import com.sidharth.chomu.domain.usecase.GetChatResultUseCase
+import com.sidharth.chomu.domain.usecase.GetChatResultUseCaseImpl
 import com.sidharth.chomu.domain.usecase.GetPromptResultUseCase
 import com.sidharth.chomu.domain.usecase.GetPromptResultUseCaseImpl
 import dagger.Module
@@ -18,5 +20,13 @@ class UseCaseModule {
         promptRepository: PromptRepository
     ): GetPromptResultUseCase {
         return GetPromptResultUseCaseImpl(promptRepository)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGetChatResultUseCase(
+        promptRepository: PromptRepository
+    ): GetChatResultUseCase {
+        return GetChatResultUseCaseImpl(promptRepository)
     }
 }
