@@ -2,6 +2,7 @@ package com.sidharth.chomu.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.sidharth.chomu.R
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         setContentView(activityMainBinding.root)
         navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
         if (NetworkUtils.isNetworkConnected(this).not()) {

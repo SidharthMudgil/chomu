@@ -11,6 +11,15 @@
 
     <style name="Theme.Chomu" parent="Base.Theme.Chomu" />
 
+    <style name="Theme.Starting" parent="Theme.SplashScreen">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/blue700</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/ic_launcher_background</item>
+        <item name="windowSplashScreenBackground">@color/blue700</item>
+        <item name="postSplashScreenTheme">@style/Theme.Chomu</item>
+    </style>
+
     <style name="Widget.App.Chip" parent="Widget.Material3.Chip.Suggestion">
         <item name="chipBackgroundColor">@color/bg_chip</item>
         <item name="chipStrokeWidth">2dp</item>
