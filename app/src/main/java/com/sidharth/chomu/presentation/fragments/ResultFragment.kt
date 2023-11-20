@@ -64,11 +64,10 @@ class ResultFragment : Fragment() {
 
                         is PromptResult.Success -> {
                             fragmentResultBinding.bottomBar.btnGenerate.isClickable = true
-                            var result = it.data
-                            result = result.removePrefix("```html")
-                            result = result.removePrefix("```")
-                            result = result.removeSuffix("```")
-                            fragmentResultBinding.tvResult.text = Html.fromHtml(result, Html.FROM_HTML_MODE_LEGACY)
+                            val bodyRegex = Regex("<body[^>]*>([\\s\\S]*?)</body>")
+                            val result = bodyRegex.find(it.data)?.groupValues?.get(1) ?: ""
+                            fragmentResultBinding.tvResult.text =
+                                Html.fromHtml(result, Html.FROM_HTML_MODE_LEGACY)
                         }
                     }
                 }
