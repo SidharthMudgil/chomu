@@ -8,27 +8,15 @@ import com.sidharth.chomu.domain.repository.PromptRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetPromptResultUseCaseImpl @Inject constructor(
+class GetChatResultUseCaseImpl @Inject constructor(
     private val promptRepository: PromptRepository
-) : GetPromptResultUseCase {
+) : GetChatResultUseCase {
 
-    override suspend fun invoke(
-        message: String,
-        command: String
-    ): Flow<PromptResult> {
+    override suspend fun invoke(messages: List<Message>): Flow<PromptResult> {
         return promptRepository.generateResult(
             Prompt(
                 model = Constants.MODEL,
-                messages = listOf(
-                    Message(
-                        role = "system",
-                        content = command
-                    ),
-                    Message(
-                        role = "user",
-                        content = message
-                    ),
-                )
+                messages = messages
             )
         )
     }
