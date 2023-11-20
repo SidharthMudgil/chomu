@@ -3,7 +3,6 @@ package com.sidharth.chomu.presentation.fragments
 import android.os.Bundle
 import android.text.Html
 import android.text.method.ScrollingMovementMethod
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -65,7 +64,6 @@ class ResultFragment : Fragment() {
 
                         is PromptResult.Success -> {
                             fragmentResultBinding.bottomBar.btnGenerate.isClickable = true
-                            Log.d("response", it.data)
                             val bodyRegex = Regex("<body[^>]*>([\\s\\S]*?)</body>").find(it.data)?.groupValues?.get(1)
                             val htmlRegex = Regex("```html([\\s\\S]*?)```|```([\\s\\S]*?)```").find(it.data)?.groupValues?.get(1)
                             val result = bodyRegex ?: htmlRegex ?: it.data
