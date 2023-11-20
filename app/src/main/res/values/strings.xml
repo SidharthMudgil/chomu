@@ -2,6 +2,7 @@
     <string name="app_name">Chomu</string>
     <string name="assistants">Assistants</string>
     <string name="chat_with_chomu">Chat with Chomu…</string>
+    <string name="chat">Chat</string>
 
     <string name="generate">Generate</string>
     <string name="purpose">Purpose</string>

@@ -9,7 +9,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.sidharth.chomu.R
 import com.sidharth.chomu.databinding.FragmentChatBinding
 import com.sidharth.chomu.domain.model.Message
 import com.sidharth.chomu.presentation.adapter.ChatAdapter
@@ -49,6 +51,10 @@ class ChatFragment : Fragment() {
     }
 
     private fun setupListeners() {
+        fragmentChatBinding.topBar.btnBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
+        fragmentChatBinding.topBar.tvTitle.text = getString(R.string.chat)
         fragmentChatBinding.searchView.btnSend.setOnClickListener {
             if (fragmentChatBinding.searchView.etInput.text.isNullOrBlank().not()) {
                 fetchMessages(
