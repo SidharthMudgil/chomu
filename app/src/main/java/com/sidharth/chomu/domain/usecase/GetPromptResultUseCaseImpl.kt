@@ -17,7 +17,7 @@ class GetPromptResultUseCaseImpl @Inject constructor(
     ): Flow<PromptResult> {
         return promptRepository.generateResult(
             Prompt(
-                model = "gpt-3.5-turbo",
+                model = "gpt-3.5-turbo-1106",
                 messages = listOf(
                     Message(
                         role = "system",

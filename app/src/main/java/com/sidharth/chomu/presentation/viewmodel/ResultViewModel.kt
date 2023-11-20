@@ -5,8 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.sidharth.chomu.domain.model.PromptResult
 import com.sidharth.chomu.domain.usecase.GetPromptResultUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -15,8 +16,8 @@ class ResultViewModel @Inject constructor(
     private val getPromptResultUseCase: GetPromptResultUseCase
 ) : ViewModel() {
 
-    private val _result = MutableSharedFlow<PromptResult>()
-    val result: SharedFlow<PromptResult> = _result
+    private val _result = MutableStateFlow<PromptResult>(PromptResult.Loading)
+    val result: StateFlow<PromptResult> = _result
 
     suspend fun fetchResult(
         prompt: String,
@@ -25,7 +26,7 @@ class ResultViewModel @Inject constructor(
         getPromptResultUseCase.invoke(
             message = prompt,
             command = command
-        ).collect {
+        ).collectLatest {
             _result.emit(it)
         }
     }

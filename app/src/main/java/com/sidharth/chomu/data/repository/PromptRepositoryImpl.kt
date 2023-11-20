@@ -18,7 +18,7 @@ class PromptRepositoryImpl @Inject constructor(
         emit(PromptResult.Loading)
         val promptResult = chomuService.getPromptResult(prompt)
         Log.d("response  error", promptResult.errorBody()?.string().toString())
-        val response = promptResult.body()?.toString()
+        val response = promptResult.body()?.string()
         Log.d("response", response.toString())
 
         if (promptResult.isSuccessful) {
