@@ -11,8 +11,8 @@ Chomu is an innovative Android app harnessing the power of generative AI to elev
 
 ## Screenshots
 
-| ![ss](./images/email.jpeg) | ![ss](./images/social_media.jpeg) | ![ss](./images/summarize.jpeg) | ![ss](./images/interview.jpeg) | ![ss](./images/conversation.jpeg) | 
-| -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- |
+| ![ss](./images/home.jpeg) | ![ss](./images/email.jpeg) | ![ss](./images/interview.jpeg) | ![ss](./images/options.jpeg) | ![ss](./images/result.jpeg) | ![ss](./images/summary.jpeg) | ![ss](./images/social.jpeg) | ![ss](./images/writing.jpeg) | 
+| -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- |
 
 ## Installation
 
