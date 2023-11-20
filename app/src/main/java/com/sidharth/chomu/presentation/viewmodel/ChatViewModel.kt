@@ -31,13 +31,13 @@ class ChatViewModel @Inject constructor(
             messages.value
         ).collectLatest {
             when (it) {
-                PromptResult.Error -> {
+                is PromptResult.Error -> {
                     messages.value.toMutableList().dropLast(1).apply {
                         _messages.emit(this)
                     }
                 }
 
-                PromptResult.Loading -> {
+                is PromptResult.Loading -> {
                     msgs = messages.value.toMutableList()
                     msgs.add(
                         Message("assistant", "Typing...")

@@ -49,13 +49,15 @@ class ChatFragment : Fragment() {
     }
 
     private fun setupListeners() {
-        if (fragmentChatBinding.searchView.etInput.text.isNullOrBlank().not()) {
-            fetchMessages(
-                Message(
-                    role = "user",
-                    content = fragmentChatBinding.searchView.etInput.text.toString()
+        fragmentChatBinding.searchView.btnSend.setOnClickListener {
+            if (fragmentChatBinding.searchView.etInput.text.isNullOrBlank().not()) {
+                fetchMessages(
+                    Message(
+                        role = "user",
+                        content = fragmentChatBinding.searchView.etInput.text.toString()
+                    )
                 )
-            )
+            }
         }
     }
 
