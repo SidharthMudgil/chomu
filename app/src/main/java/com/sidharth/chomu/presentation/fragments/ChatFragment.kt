@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -12,6 +13,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.sidharth.chomu.R
+import com.sidharth.chomu.core.utils.KeyboardUtils
 import com.sidharth.chomu.databinding.FragmentChatBinding
 import com.sidharth.chomu.domain.model.Message
 import com.sidharth.chomu.presentation.adapter.ChatAdapter
@@ -54,16 +56,30 @@ class ChatFragment : Fragment() {
         fragmentChatBinding.topBar.btnBack.setOnClickListener {
             findNavController().navigateUp()
         }
+        fragmentChatBinding.searchView.etInput.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_SEND) {
+                onSendButtonClick()
+                true
+            } else {
+                false
+            }
+        }
         fragmentChatBinding.topBar.tvTitle.text = getString(R.string.chat)
         fragmentChatBinding.searchView.btnSend.setOnClickListener {
-            if (fragmentChatBinding.searchView.etInput.text.isNullOrBlank().not()) {
-                fetchMessages(
-                    Message(
-                        role = "user",
-                        content = fragmentChatBinding.searchView.etInput.text.toString()
-                    )
+            onSendButtonClick()
+        }
+    }
+
+    private fun onSendButtonClick() {
+        if (fragmentChatBinding.searchView.etInput.text.isNullOrBlank().not()) {
+            KeyboardUtils.hideKeyboard(requireContext(), fragmentChatBinding.searchView.etInput)
+            fragmentChatBinding.searchView.etInput.setText("")
+            fetchMessages(
+                Message(
+                    role = "user",
+                    content = fragmentChatBinding.searchView.etInput.text.toString()
                 )
-            }
+            )
         }
     }
 

@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sidharth.chomu.core.constant.Constants
 import com.sidharth.chomu.core.enums.Assistants
+import com.sidharth.chomu.core.utils.KeyboardUtils
 import com.sidharth.chomu.databinding.FragmentHomeBinding
 import com.sidharth.chomu.presentation.adapter.AssistantAdapter
 import com.sidharth.chomu.presentation.callback.OnAssistantClickCallback
@@ -29,12 +31,26 @@ class HomeFragment : Fragment(), OnAssistantClickCallback {
 
     private fun setupClickListeners() {
         fragmentHomeBinding.searchView.btnSend.setOnClickListener {
-            if (fragmentHomeBinding.searchView.etInput.text.isNullOrBlank().not()) {
-                val action = HomeFragmentDirections.actionHomeFragmentToChatFragment(
-                    fragmentHomeBinding.searchView.etInput.text.toString()
-                )
-                findNavController().navigate(action)
+            onSendButtonClick()
+        }
+        fragmentHomeBinding.searchView.etInput.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_SEND) {
+                onSendButtonClick()
+                true
+            } else {
+                false
             }
+        }
+    }
+
+    private fun onSendButtonClick() {
+        if (fragmentHomeBinding.searchView.etInput.text.isNullOrBlank().not()) {
+            KeyboardUtils.hideKeyboard(requireContext(), fragmentHomeBinding.searchView.etInput)
+            fragmentHomeBinding.searchView.etInput.setText("")
+            val action = HomeFragmentDirections.actionHomeFragmentToChatFragment(
+                fragmentHomeBinding.searchView.etInput.text.toString()
+            )
+            findNavController().navigate(action)
         }
     }
 
