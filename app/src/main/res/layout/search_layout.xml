@@ -25,7 +25,6 @@
             android:layout_height="match_parent"
             android:background="@null"
             android:hint="@string/chat_with_chomu"
-            android:imeOptions="actionSend"
             android:paddingStart="@dimen/rounded_content_padding"
             android:paddingEnd="@dimen/rounded_content_padding"
             android:textColor="@color/grey100"

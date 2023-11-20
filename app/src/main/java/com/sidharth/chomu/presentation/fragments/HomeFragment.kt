@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,23 +32,19 @@ class HomeFragment : Fragment(), OnAssistantClickCallback {
         fragmentHomeBinding.searchView.btnSend.setOnClickListener {
             onSendButtonClick()
         }
-        fragmentHomeBinding.searchView.etInput.setOnEditorActionListener { _, actionId, _ ->
-            if (actionId == EditorInfo.IME_ACTION_SEND) {
-                onSendButtonClick()
-                true
-            } else {
-                false
-            }
+        fragmentHomeBinding.searchView.etInput.setOnEditorActionListener { _, _, _ ->
+            onSendButtonClick()
+            true
         }
     }
 
     private fun onSendButtonClick() {
         if (fragmentHomeBinding.searchView.etInput.text.isNullOrBlank().not()) {
             KeyboardUtils.hideKeyboard(requireContext(), fragmentHomeBinding.searchView.etInput)
-            fragmentHomeBinding.searchView.etInput.setText("")
             val action = HomeFragmentDirections.actionHomeFragmentToChatFragment(
                 fragmentHomeBinding.searchView.etInput.text.toString()
             )
+            fragmentHomeBinding.searchView.etInput.setText("")
             findNavController().navigate(action)
         }
     }
