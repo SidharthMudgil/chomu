@@ -47,6 +47,7 @@ class ChatViewModel @Inject constructor(
 
                 is PromptResult.Success -> {
                     msgs = messages.value.toMutableList()
+                    msgs.removeLast()
                     msgs.add(
                         Message("assistant", it.data)
                     )
