@@ -9,6 +9,8 @@ import androidx.navigation.fragment.findNavController
 import com.sidharth.chomu.R
 import com.sidharth.chomu.core.constant.Constants
 import com.sidharth.chomu.databinding.FragmentSocialBinding
+import com.sidharth.chomu.domain.model.Options
+import com.sidharth.chomu.presentation.component.AdvanceOptionsBottomSheet
 
 class SocialFragment : Fragment() {
 
@@ -23,6 +25,14 @@ class SocialFragment : Fragment() {
         return fragmentSocialBinding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        findNavController().currentBackStackEntry
+            ?.savedStateHandle
+            ?.getLiveData<Options>(AdvanceOptionsBottomSheet.KEY_OPTIONS)
+            ?.observe(viewLifecycleOwner) { options = it }
+    }
+
     private fun setupViewsAndListeners() {
         fragmentSocialBinding.topBar.btnBack.setOnClickListener {
             findNavController().navigateUp()
@@ -31,9 +41,7 @@ class SocialFragment : Fragment() {
         fragmentSocialBinding.bottomBar.btnGenerate.setOnClickListener {
             if (isInputValid()) {
                 val action = SocialFragmentDirections.actionSocialFragmentToResultFragment(
-                    prompt = "platform: ${getPlatform()}" +
-                            "contentType: ${getContentType()}" +
-                            "purpose: ${fragmentSocialBinding.etPurpose.text}",
+                    prompt = getPrompt(),
                     command = Constants.COMMAND_SOCIAL
                 )
                 findNavController().navigate(action)
@@ -66,7 +74,26 @@ class SocialFragment : Fragment() {
         }
     }
 
+    private fun getPrompt(): String {
+        return "platform: ${getPlatform()}" +
+                "contentType: ${getContentType()}" +
+                "purpose: ${fragmentSocialBinding.etPurpose.text}" +
+                "Formality: ${options.formality}" +
+                "Tone: ${options.tone}" +
+                "Length: ${options.length}" +
+                "Style: ${options.style}"
+    }
+
     private fun isInputValid(): Boolean {
         return fragmentSocialBinding.etPurpose.text.isNullOrBlank().not()
+    }
+
+    companion object {
+        private var options = Options(
+            formality = "Neutral",
+            tone = "Cooperative",
+            length = "Medium",
+            style = "None"
+        )
     }
 }

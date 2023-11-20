@@ -27,6 +27,7 @@ class GrammarFragment : Fragment() {
         fragmentGrammarBinding.topBar.btnBack.setOnClickListener {
             findNavController().navigateUp()
         }
+        fragmentGrammarBinding.bottomBar.btnAdvance.visibility = View.GONE
         fragmentGrammarBinding.topBar.tvTitle.text = getString(R.string.grammar)
         fragmentGrammarBinding.bottomBar.btnGenerate.setOnClickListener {
             if (isInputValid()) {
@@ -38,8 +39,7 @@ class GrammarFragment : Fragment() {
             }
         }
         fragmentGrammarBinding.bottomBar.btnAdvance.setOnClickListener {
-            val action =
-                GrammarFragmentDirections.actionGrammarFragmentToAdvanceOptionsBottomSheet()
+            val action = GrammarFragmentDirections.actionGrammarFragmentToAdvanceOptionsBottomSheet()
             findNavController().navigate(action)
         }
     }

@@ -9,6 +9,8 @@ import androidx.navigation.fragment.findNavController
 import com.sidharth.chomu.R
 import com.sidharth.chomu.core.constant.Constants
 import com.sidharth.chomu.databinding.FragmentWritingBinding
+import com.sidharth.chomu.domain.model.Options
+import com.sidharth.chomu.presentation.component.AdvanceOptionsBottomSheet
 
 class WritingFragment : Fragment() {
 
@@ -23,6 +25,14 @@ class WritingFragment : Fragment() {
         return fragmentWritingBinding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        findNavController().currentBackStackEntry
+            ?.savedStateHandle
+            ?.getLiveData<Options>(AdvanceOptionsBottomSheet.KEY_OPTIONS)
+            ?.observe(viewLifecycleOwner) { options = it }
+    }
+
     private fun setupViewsAndListeners() {
         fragmentWritingBinding.topBar.btnBack.setOnClickListener {
             findNavController().navigateUp()
@@ -32,8 +42,7 @@ class WritingFragment : Fragment() {
         fragmentWritingBinding.bottomBar.btnGenerate.setOnClickListener {
             if (isInputValid()) {
                 val action = WritingFragmentDirections.actionWritingFragmentToResultFragment(
-                    prompt = "content type: ${getContentType()}" +
-                            "topic: ${fragmentWritingBinding.etTopic.text}",
+                    prompt = getPrompt(),
                     command = Constants.COMMAND_WRITING
                 )
                 findNavController().navigate(action)
@@ -64,7 +73,25 @@ class WritingFragment : Fragment() {
         }
     }
 
+    private fun getPrompt(): String {
+        return "content type: ${getContentType()}" +
+                "topic: ${fragmentWritingBinding.etTopic.text}" +
+                "Formality: ${options.formality}" +
+                "Tone: ${options.tone}" +
+                "Length: ${options.length}" +
+                "Style: ${options.style}"
+    }
+
     private fun isInputValid(): Boolean {
         return fragmentWritingBinding.etTopic.text.isNullOrBlank().not()
+    }
+
+    companion object {
+        private var options = Options(
+            formality = "Neutral",
+            tone = "Cooperative",
+            length = "Medium",
+            style = "None"
+        )
     }
 }
