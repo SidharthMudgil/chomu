@@ -13,10 +13,17 @@ class GetChatResultUseCaseImpl @Inject constructor(
 ) : GetChatResultUseCase {
 
     override suspend fun invoke(messages: List<Message>): Flow<PromptResult> {
+        val mutableMessages = messages.toMutableList()
+        mutableMessages.add(
+            0, Message(
+                role = "system",
+                content = Constants.COMMAND_CHOMU
+            )
+        )
         return promptRepository.generateResult(
             Prompt(
                 model = Constants.MODEL,
-                messages = messages
+                messages = mutableMessages
             )
         )
     }
