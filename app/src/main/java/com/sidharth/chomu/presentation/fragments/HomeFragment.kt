@@ -1,10 +1,10 @@
 package com.sidharth.chomu.presentation.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sidharth.chomu.core.constant.Constants
@@ -23,7 +23,19 @@ class HomeFragment : Fragment(), OnAssistantClickCallback {
     ): View {
         fragmentHomeBinding = FragmentHomeBinding.inflate(inflater)
         setupRecyclerView()
+        setupClickListeners()
         return fragmentHomeBinding.root
+    }
+
+    private fun setupClickListeners() {
+        fragmentHomeBinding.searchView.btnSend.setOnClickListener {
+            if (fragmentHomeBinding.searchView.etInput.text.isNullOrBlank().not()) {
+                val action = HomeFragmentDirections.actionHomeFragmentToChatFragment(
+                    fragmentHomeBinding.searchView.etInput.text.toString()
+                )
+                findNavController().navigate(action)
+            }
+        }
     }
 
     private fun setupRecyclerView() {

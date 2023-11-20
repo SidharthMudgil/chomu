@@ -181,6 +181,9 @@
         <action
             android:id="@+id/action_chatFragment_to_noNetworkFragment"
             app:destination="@id/noNetworkFragment" />
+        <argument
+            android:name="message"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/writingFragment"
