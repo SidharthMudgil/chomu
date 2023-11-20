@@ -65,9 +65,9 @@ class ResultFragment : Fragment() {
                         is PromptResult.Success -> {
                             fragmentResultBinding.bottomBar.btnGenerate.isClickable = true
                             var result = it.data
-                            result = result.removePrefix("'''html")
-                            result = result.removePrefix("'''")
-                            result = result.removeSuffix("'''")
+                            result = result.removePrefix("```html")
+                            result = result.removePrefix("```")
+                            result = result.removeSuffix("```")
                             fragmentResultBinding.tvResult.text = Html.fromHtml(result, Html.FROM_HTML_MODE_LEGACY)
                         }
                     }
