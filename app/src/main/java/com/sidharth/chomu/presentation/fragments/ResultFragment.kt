@@ -76,5 +76,6 @@ class ResultFragment : Fragment() {
             findNavController().navigateUp()
         }
         fragmentResultBinding.topBar.tvTitle.text = getString(R.string.result)
+        fragmentResultBinding.bottomBar.btnGenerate.setOnClickListener { fetchResult() }
     }
 }
